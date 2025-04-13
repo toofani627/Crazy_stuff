@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    background: 
+    url('img/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    /* gap: 20px; */
+ 
+}
+
+#quiz {
+    width: 90vw;
+    border-radius: 50px;
+    /* border: 2px solid white; */
+    height: 70vh;
+    background-color: rgb(0, 136, 255);
+    display: flex;
+    justify-content: flex-start;
+    /* overflow: hidden; */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#top {
+    width:40%;
+    border-radius: 50px;
+    position: absolute;
+    top: -70px;
+    height: 20%;
+    background-color: rgb(0, 108, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 40px; */
+    /* padding-top: 20px; */
+}
+
+#top img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#top h1{
+    font-size: 70px;
+    font-weight: 600;
+    color: rgb(213, 233, 255);
+
+    font-family: 'barrio';
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.main-con{  
+    width: 100%;
+    height: 100%;
+    padding: 60px 60px;
+    /* background-color: red; */
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.question{
+    font-size: 30px;
+    width: 100%;
+    color: rgb(70, 247, 247);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.answer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.opt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100px;
+    background-color: rgb(204, 247, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Sour Gummy';
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.opt h3{
+    /* margin-right: 5vw; */
+    font-weight: 500;
+    text-transform:capitalize;
+    font-size: 23px;
+}
+.opt:hover{
+    background-color: rgb(134, 227, 255);
+    color: rgb(0, 39, 95);
+}
+
+
+
+.optname{
+    width : 120px;
+
+    height: 120px;
+    background-color: rgb(0, 180, 156);
+    background: linear-gradient(45deg, rgb(0, 180, 156), rgb(0, 255, 221));
+    position: absolute;
+    left: -4%;
+
+
+    border-radius: 70%;
+    
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:50px;
+    font-weight: 600;
+    color: white;
+    /* box-shadow: 0 0 10px 10px rgb(0, 255, 221); */
+}
+
+.opt:hover .optname{
+    box-shadow:7px 0px 20px 0px rgb(0, 255, 221)
+}
+
+.controls {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(0, 180, 156), rgb(0, 255, 221));
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 221, 0.3);
+}
+
+.check:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 221, 0.4);
+}
+
+.check:active {
+    transform: translateY(1px);
+}
+
+
+
+

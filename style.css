@@ -1,0 +1,425 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/* Base styles */
+body {
+    overflow: hidden;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+}
+
+.content{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 3;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom{
+    margin-left: 10px;
+}
+
+
+#h1 {
+    color: #d1d5db; /* text-gray-300 */
+    font-size: 7.6vw;
+    font-family: 'Poppins', ;
+    /* z-index: 3; */
+    /* position: absolute; */
+    /* top: 5%; */
+    /* left: 5%; */
+    letter-spacing: -0.025em; /* tracking-tight */
+    /* font-style: italic; */
+}
+
+p{
+    color: #cbcbcd; /* text-gray-400 for slightly dimmer text than h1 */
+    font-size: 17px;
+    width: 44%;
+    line-height: 1.4;
+    /* position: absolute; */
+  /* top: 23%; Position below h1 accounting for h1's top position */
+    /* left: 5%; Match h1's left alignment */
+    max-width: 60%;
+    /* z-index: 3; */
+    /* font-family: 'Poppins', ;
+     */
+     font-family: 'poppins';
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* style for button */
+/* From Uiverse.io by augustin_4687 */ 
+.button {
+    --stone-50: #fafaf9;
+    --stone-800: #292524;
+    --yellow-400: #facc15;
+  
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 1rem;
+    border-radius: 1rem;
+    outline: 2px solid transparent;
+    outline-offset: 6px;
+    color: var(--stone-50);
+  
+    &:active {
+      outline-color: var(--yellow-400);
+    }
+  
+    &:focus-visible {
+      outline-color: var(--yellow-400);
+      outline-style: dashed;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      height: 200%;
+      max-height: 100px;
+      aspect-ratio: 1;
+      margin: auto;
+      background: white;
+      clip-path: polygon(
+        100% 50%,
+        91.48% 56.57%,
+        97.55% 65.45%,
+        87.42% 69.07%,
+        90.45% 79.39%,
+        79.7% 79.7%,
+        79.39% 90.45%,
+        69.07% 87.42%,
+        65.45% 97.55%,
+        56.57% 91.48%,
+        50% 100%,
+        43.43% 91.48%,
+        34.55% 97.55%,
+        30.93% 87.42%,
+        20.61% 90.45%,
+        20.3% 79.7%,
+        9.55% 79.39%,
+        12.58% 69.07%,
+        2.45% 65.45%,
+        8.52% 56.57%,
+        0% 50%,
+        8.52% 43.43%,
+        2.45% 34.55%,
+        12.58% 30.93%,
+        9.55% 20.61%,
+        20.3% 20.3%,
+        20.61% 9.55%,
+        30.93% 12.58%,
+        34.55% 2.45%,
+        43.43% 8.52%,
+        50% 0%,
+        56.57% 8.52%,
+        65.45% 2.45%,
+        69.07% 12.58%,
+        79.39% 9.55%,
+        79.7% 20.3%,
+        90.45% 20.61%,
+        87.42% 30.93%,
+        97.55% 34.55%,
+        91.48% 43.43%
+      );
+  
+      animation: star-rotate 4s linear infinite;
+      opacity: 0.1;
+    }
+  
+    &:hover::before {
+      opacity: 1;
+    }
+  
+    & > div {
+      padding: 2px;
+      border-radius: 1rem;
+      background-color: var(--yellow-400);
+      transform: translate(-4px, -4px);
+      transition: all 150ms ease;
+      box-shadow:
+        0.5px 0.5px 0 0 var(--yellow-400),
+        1px 1px 0 0 var(--yellow-400),
+        1.5px 1.5px 0 0 var(--yellow-400),
+        2px 2px 0 0 var(--yellow-400),
+        2.5px 2.5px 0 0 var(--yellow-400),
+        3px 3px 0 0 var(--yellow-400),
+        0 0 0 2px var(--stone-800),
+        0.5px 0.5px 0 2px var(--stone-800),
+        1px 1px 0 2px var(--stone-800),
+        1.5px 1.5px 0 2px var(--stone-800),
+        2px 2px 0 2px var(--stone-800),
+        2.5px 2.5px 0 2px var(--stone-800),
+        3px 3px 0 2px var(--stone-800),
+        3.5px 3.5px 0 2px var(--stone-800),
+        4px 4px 0 2px var(--stone-800),
+        0 0 0 4px var(--stone-50),
+        0.5px 0.5px 0 4px var(--stone-50),
+        1px 1px 0 4px var(--stone-50),
+        1.5px 1.5px 0 4px var(--stone-50),
+        2px 2px 0 4px var(--stone-50),
+        2.5px 2.5px 0 4px var(--stone-50),
+        3px 3px 0 4px var(--stone-50),
+        3.5px 3.5px 0 4px var(--stone-50),
+        4px 4px 0 4px var(--stone-50);
+  
+      .button:hover & {
+        transform: translate(0, 0);
+        box-shadow:
+          0 0 0 0 var(--yellow-400),
+          0 0 0 0 var(--yellow-400),
+          0 0 0 0 var(--yellow-400),
+          0 0 0 0 var(--yellow-400),
+          0 0 0 0 var(--yellow-400),
+          0 0 0 0 var(--yellow-400),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 2px var(--stone-800),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50),
+          0 0 0 4px var(--stone-50);
+      }
+  
+      & > div {
+        position: relative;
+        pointer-events: none;
+        border-radius: calc(1rem - 2px);
+        background-color: var(--stone-800);
+  
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 1rem;
+          opacity: 0.1;
+          background-image: radial-gradient(
+              rgb(255 255 255 / 80%) 20%,
+              transparent 20%
+            ),
+            radial-gradient(rgb(255 255 255 / 100%) 20%, transparent 20%);
+          background-position:
+            0 0,
+            4px 4px;
+          background-size: 8px 8px;
+          mix-blend-mode: hard-light;
+          box-shadow: inset 0 0 0 1px var(--stone-800);
+          animation: dots 0.4s infinite linear;
+          transition: opacity 150ms ease;
+        }
+  
+        & > div {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 0.75rem 1.25rem;
+          gap: 0.25rem;
+          filter: drop-shadow(0 -1px 0 var(--stone-800));
+  
+          &:hover {
+            filter: drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.1));
+          }
+  
+          &:active {
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes star-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes dots {
+    0% {
+      background-position:
+        0 0,
+        4px 4px;
+    }
+    100% {
+      background-position:
+        8px 0,
+        12px 4px;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .button {
+      &:active,
+      &:focus-visible {
+        outline-color: var(--yellow-400);
+      }
+    }
+  }
+  
+
+
+body::selection{
+  background-color: hsl(145, 100%, 51%);
+  color: rgb(0, 66, 32);
+}
+.bottom{
+  width: 40%;
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
+   
+  align-items: center;
+}
+#button {
+  background-color: transparent;
+  border: 1.5px solid rgb(137, 255, 141);
+  color: white;
+  padding: 15px 31px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 25px;
+  font-family: monospace;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#button:hover{
+  background: #005935ae;
+}
+
+
+.pointer{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  z-index: 115;
+  mix-blend-mode: difference;
+  background-color: white;
+}
+
+
+.devInfo{
+  position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background: transparent;
+    z-index: 5;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.devInfo h2{
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins' ;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.devInfo h2 span{
+  font-weight: 600;
+  font-size: 18px;
+  /* margin-left: 5px; */
+  font-family: serif;
+  font-style: italic;
+  background-color: white;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 5px;
+
+}
+
+
+
+#github{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 25px;
+  
+  border-radius: 5px;
+  /* background-color: white; */
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  /* color: black; */
+}
+
+#github:hover{
+  background: rgba(68, 68, 68, 0.729);
+  /* color: black; */
+}
+
+#github img{
+  width: 20px;
+  height: 20px;
+    filter: invert(1);
+}
+
+#github h3{
+  font-size: 16px;
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+

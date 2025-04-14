@@ -71,7 +71,7 @@ let model;
 
 console.log('Starting model load...');
 loader.load(
-    '/scene.gltf', // Updated path to point to public directory
+    'public/scene.gltf', // Updated path to point to public directory
     function (gltf) {
         console.log('Model loaded successfully');
         model = gltf.scene;
